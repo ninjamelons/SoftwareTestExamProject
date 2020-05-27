@@ -12,10 +12,19 @@ namespace SoftwareTest_Tests
     public class ExplorationTest
     {
         [TestMethod]
-        public void Test()
+        [DataRow(1, 1, new[] { 1, 0 }, DisplayName = "Valid move up")]
+        [DataRow(1, 0, new[] { 1, 0 }, DisplayName = "Invalid move up")]
+        public void TestMoveUp(int playerxcoord, int playerycoord, int[] expectedCoords)
         {
-            ExplorationFunc func = new ExplorationFunc(4,  4);
+            //Setup
+            int mapSizeX = 4, mapSizeY = 4;
+            ExplorationFunc exp = new ExplorationFunc(mapSizeX, mapSizeY);
+
+            //Execute
+            int[] returnCoords = exp.ButtonUp_Click(new[] { playerxcoord, playerycoord });
+
+            //Assert
+            Assert.AreEqual(expectedCoords[0], returnCoords[0]);
         }
-               
     }
 }
