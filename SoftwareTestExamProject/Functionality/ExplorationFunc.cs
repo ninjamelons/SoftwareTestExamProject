@@ -3,12 +3,21 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
+<<<<<<< HEAD
 namespace SoftwareTestExamProject
 {
     public class ExplorationFunc
     {
         private int mapSizeX;
         private int mapSizeY;
+=======
+namespace SoftwareTestExamProject.Functionality
+{
+    public class ExplorationFunc
+    {
+        int mapSizeX;
+        int mapSizeY;
+>>>>>>> b9d0db1f9a612c5f7269117da930eb3e965bace8
 
         public ExplorationFunc(int mapsizeX, int mapsizeY)
         {
@@ -63,11 +72,19 @@ namespace SoftwareTestExamProject
                     // Tilføj antal rækker 
                     if (playerCoords[0] == x && playerCoords[1] == y)
                     {
+<<<<<<< HEAD
                         mapString += "|_+_|";
                     }
                     else
                     {
                         mapString += "|___|";
+=======
+                        mapString = mapString + "|_+_|";
+                    }
+                    else
+                    {
+                        mapString = mapString + "|___|";
+>>>>>>> b9d0db1f9a612c5f7269117da930eb3e965bace8
                     }
                 }
                 mapString += "<br>";

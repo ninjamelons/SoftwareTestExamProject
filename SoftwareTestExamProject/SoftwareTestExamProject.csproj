@@ -197,10 +197,14 @@
     <Compile Include="Exploration.aspx.designer.cs">
       <DependentUpon>Exploration.aspx</DependentUpon>
     </Compile>
+<<<<<<< HEAD
     <Compile Include="Functionality\BattleFunc.cs" />
     <Compile Include="Functionality\Character.cs" />
     <Compile Include="Functionality\ExplorationFunc.cs" />
     <Compile Include="Functionality\Test.cs" />
+=======
+    <Compile Include="Functionality\ExplorationFunc.cs" />
+>>>>>>> b9d0db1f9a612c5f7269117da930eb3e965bace8
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
