@@ -29,7 +29,7 @@ namespace SoftwareTestExamProject.Functionality
         {
             if (CurrentHp < MaxHp)
             {
-                if (CurrentHp <= MaxHp * 0.8f)
+                if (CurrentHp < MaxHp * 0.8f)
                 {
                     CurrentHp += MaxHp * 0.2f;
                 }

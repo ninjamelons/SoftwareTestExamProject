@@ -52,7 +52,7 @@ namespace SoftwareTestExamProject
         private void Encounter()
         {
             //If we hit an encounter we switch page to Battle page
-            if (exp.Encounter())
+            if (exp.Encounter(new Random().Next(0, ExplorationFunc.EncounterRange)))
                 Response.Redirect("~/Battle.aspx");
         }
     }

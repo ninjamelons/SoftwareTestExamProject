@@ -32,40 +32,26 @@ namespace SoftwareTestExamProject
         }
 
 
-        public int  BattleSimulation(int playerAction, Player player, Enemy enemy)
+        public int BattleSimulation(int playerAction, int enemyAction, Player player, Enemy enemy)
         {
-            Random rnd = new Random();
-            int rndEnemyAction = rnd.Next(1, 3);
 
-            //Enemy defend action
-            if (rndEnemyAction == 2)
+            #region Do we defends?
+            // Enemy
+            if (enemyAction == 2)
             {
                 enemy.Defend();
             }
-            switch (playerAction)
+
+            // Player
+            if (playerAction == 2)
             {
-                case 1:
-                    if (enemy.IsDefending)
-                    {
-                        enemy.CurrentHp -= player.Attack() * 0.8f;
-                        break;
-                    }
-                    enemy.CurrentHp -= player.Attack();
-
-                    break;
-                case 2:
-                    player.Defend();
-                    break;
-                case 3:
-                    player.Heal();
-                    break;
-                default:
-                    //Error
-                    break;
+                player.Defend();
             }
+            #endregion
 
-            //Enemy attack Action
-            if (rndEnemyAction == 1)
+            #region Do we attack?
+            // Enemy
+            if (enemyAction == 1)
             {
                 if (player.IsDefending)
                 {
@@ -73,14 +59,35 @@ namespace SoftwareTestExamProject
                 }
                 else
                 {
-                    player.CurrentHp -= player.Attack();
+                    player.CurrentHp -= enemy.Attack();
                 }
             }
-            else
+
+            // Player
+            if (playerAction == 1)
             {
-                enemy.Heal();
+                if (enemy.IsDefending)
+                {
+                    enemy.CurrentHp -= player.Attack() * 0.8f;
+                }
+                else
+                {
+                    enemy.CurrentHp -= player.Attack();
+                }
             }
-            return rndEnemyAction;
+            #endregion
+
+            #region Do we heal?
+            // Enemy 
+            if (enemyAction == 3)
+                enemy.Heal();
+
+            //Player
+            if (playerAction == 3)
+                player.Heal();
+            #endregion
+
+            return enemyAction;
         }
     }
 }

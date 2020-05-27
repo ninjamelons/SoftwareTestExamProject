@@ -7,8 +7,10 @@ namespace SoftwareTestExamProject.Functionality
 {
     public class ExplorationFunc
     {
-        int mapSizeX;
-        int mapSizeY;
+        public readonly int mapSizeX, mapSizeY;
+
+        public static int EncounterNo { get; } = 2;
+        public static int EncounterRange { get; } = 5;
 
         public ExplorationFunc(int mapsizeX, int mapsizeY)
         {
@@ -52,14 +54,11 @@ namespace SoftwareTestExamProject.Functionality
             return playerCoords;
         }
 
-        public bool Encounter()
+        public bool Encounter(int encounter)
         {
             bool result = false;
-
-            Random rnd = new Random();
-            int tmpRnd = rnd.Next(0, 5);
-
-            if (tmpRnd <= 2)
+            
+            if (encounter <= EncounterNo)
             {
                 result = true;
             }
