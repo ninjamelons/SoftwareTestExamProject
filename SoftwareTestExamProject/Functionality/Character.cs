@@ -2,12 +2,13 @@
 public abstract class Character
 {
     //Properties
-    protected string Name { get; set; }
-    protected int Health { get; set; }
-    protected int Damage { get; set; }
+    public string Name { get; set; }
+    public float MaxHp { get; set; }
+    public float Damage { get; set; }
+    public float CurrentHp { get; set; }
 
     //Abstract methods
-    public abstract void Attack();
+    public abstract float Attack();
     public abstract void Defend();
     public abstract void Heal();
 }

@@ -50,6 +50,11 @@
         <p>
             <asp:Button ID="HealButton" runat="server" Text="Heal" OnClick="HealButton_Click" style="height: 26px" />
         </p>
+        <p>
+            <asp:Label ID="enemyActionLabel" runat="server" Text="enemyActionLabel"></asp:Label>
+&nbsp; |&nbsp;
+            <asp:Label ID="playerActionLabel" runat="server" Text="playerActionLabel"></asp:Label>
+        </p>
     </form>
 </body>
 </html>

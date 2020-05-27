@@ -2,20 +2,17 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using SoftwareTestExamProject.Functionality;
 
 namespace SoftwareTestExamProject
 {
     public class BattleFunc
     {
-        Player player;
-        Enemy enemy;
-
         readonly string[] enemyNames = { "Rat", "Dog", "Cat" };
 
         public Enemy CreateEnemy()
         {
-            enemy = new Enemy(RandomizeName(), RandomizeNumber(15, 150), RandomizeNumber(2, 20));
-            return enemy;
+            return new Enemy(RandomizeName(), RandomizeNumber(15, 150), RandomizeNumber(2, 20));
         }
 
         private int RandomizeNumber(int min, int max)
@@ -35,11 +32,12 @@ namespace SoftwareTestExamProject
         }
 
 
-        public void BattleSimulation(int playerAction)
+        public int  BattleSimulation(int playerAction, Player player, Enemy enemy)
         {
             Random rnd = new Random();
-            int rndEnemyAction = rnd.Next(0, 3);
+            int rndEnemyAction = rnd.Next(1, 3);
 
+            //Enemy defend action
             if (rndEnemyAction == 2)
             {
                 enemy.Defend();
@@ -47,7 +45,13 @@ namespace SoftwareTestExamProject
             switch (playerAction)
             {
                 case 1:
-                    player.Attack();
+                    if (enemy.IsDefending)
+                    {
+                        enemy.CurrentHp -= player.Attack() * 0.8f;
+                        break;
+                    }
+                    enemy.CurrentHp -= player.Attack();
+
                     break;
                 case 2:
                     player.Defend();
@@ -59,14 +63,24 @@ namespace SoftwareTestExamProject
                     //Error
                     break;
             }
+
+            //Enemy attack Action
             if (rndEnemyAction == 1)
             {
-                enemy.Attack();
+                if (player.IsDefending)
+                {
+                    player.CurrentHp -= enemy.Attack() * 0.8f;
+                }
+                else
+                {
+                    player.CurrentHp -= player.Attack();
+                }
             }
             else
             {
                 enemy.Heal();
             }
+            return rndEnemyAction;
         }
     }
 }

@@ -52,6 +52,21 @@ namespace SoftwareTestExamProject.Functionality
             return playerCoords;
         }
 
+        public bool Encounter()
+        {
+            bool result = false;
+
+            Random rnd = new Random();
+            int tmpRnd = rnd.Next(0, 5);
+
+            if (tmpRnd <= 2)
+            {
+                result = true;
+            }
+
+            return result;
+        }
+
         public string CreateMap(int[] playerCoords)
         {
             string mapString = "";

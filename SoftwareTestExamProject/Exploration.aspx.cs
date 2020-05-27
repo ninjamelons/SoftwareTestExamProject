@@ -1,4 +1,4 @@
-﻿using SoftwareTestExamProject;
+﻿using SoftwareTestExamProject.Functionality;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -12,7 +12,7 @@ namespace SoftwareTestExamProject
     public partial class Exploration : System.Web.UI.Page
     {
         Player player;
-       public ExplorationFunc exp;
+        ExplorationFunc exp;
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -51,13 +51,9 @@ namespace SoftwareTestExamProject
 
         private void Encounter()
         {
-            Random rnd = new Random();
-            int tmpRnd = rnd.Next(0, 5);
-
-            if (tmpRnd <= 2)
-            {
+            //If we hit an encounter we switch page to Battle page
+            if (exp.Encounter())
                 Response.Redirect("~/Battle.aspx");
-            }
         }
     }
 }

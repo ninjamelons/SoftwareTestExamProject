@@ -1,4 +1,4 @@
-﻿using SoftwareTestExamProject;
+﻿using SoftwareTestExamProject.Functionality;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,8 +11,6 @@ namespace SoftwareTestExamProject
     public partial class Battle : System.Web.UI.Page
     {
 
-        //Label names:  playerNameLabel, playerHpLabel, playerDmgLabel, 
-        //              enemyDmgLabel, enemyDmgLabel, enemyDmgLabel
         Player player;
         Enemy enemy;
         BattleFunc battleFunc;
@@ -21,23 +19,122 @@ namespace SoftwareTestExamProject
         {
             battleFunc = new BattleFunc();
             player = (Player)Session["player"];
-            battleFunc.CreateEnemy();
+
+            if (Session["enemy"] == null)
+            {
+                Session["enemy"] = battleFunc.CreateEnemy();
+            }
+            enemy = (Enemy)Session["enemy"];
+
+            LabelSetup();
+
         }
 
- 
+
         protected void AttackButton_Click(object sender, EventArgs e)
         {
-            battleFunc.BattleSimulation(1);
+
+            UpdateLabels(1, battleFunc.BattleSimulation(1, player, enemy));
+            HPCheck();
         }
 
         protected void DefendButton_Click(object sender, EventArgs e)
         {
-            battleFunc.BattleSimulation(2);
+            UpdateLabels(2, battleFunc.BattleSimulation(2, player, enemy));
+            HPCheck();
         }
 
         protected void HealButton_Click(object sender, EventArgs e)
         {
-            battleFunc.BattleSimulation(3);
+            UpdateLabels(3, battleFunc.BattleSimulation(3, player, enemy));
+            HPCheck();
+        }
+
+        private void LabelSetup()
+        {
+            playerNameLabel.Text = player.Name;
+            playerHpLabel.Text = Convert.ToInt32(player.CurrentHp).ToString();
+            playerDmgLabel.Text = Convert.ToInt32(player.Damage).ToString();
+
+            enemyNameLabel.Text = enemy.Name;
+            enemyHpLabel.Text = Convert.ToInt32(enemy.CurrentHp).ToString();
+            enemyDmgLabel.Text = Convert.ToInt32(enemy.Damage).ToString();
+
+            playerActionLabel.Text = "";
+            enemyActionLabel.Text = "";
+        }
+
+        private void UpdateLabels(int playerAction, int enemyAction)
+        {
+            //Update enemy labels
+            enemyHpLabel.Text = Convert.ToInt32(enemy.CurrentHp).ToString();
+            enemyDmgLabel.Text = Convert.ToInt32(enemy.Damage).ToString();
+            //Update player labels
+            playerHpLabel.Text = Convert.ToInt32(player.CurrentHp).ToString();
+            playerDmgLabel.Text = Convert.ToInt32(player.Damage).ToString();
+
+            switch (playerAction)
+            {
+                case 1:
+                    if (enemy.IsDefending)
+                    {
+                        playerActionLabel.Text = "Player Attacks and deals " + (player.Damage * 0.8f) + " damage";
+                    }
+                    else
+                    {
+                        playerActionLabel.Text = "Player Attacks and deals " + player.Damage + " damage";
+                    }
+                    break;
+                case 2:
+                    playerActionLabel.Text = "Player Defends";
+                    break;
+                case 3:
+                    playerActionLabel.Text = "Player Heals";
+                    break;
+                default:
+                    //Error
+                    break;
+            }
+
+            switch (enemyAction)
+            {
+                case 1:
+                    if (player.IsDefending)
+                    {
+
+                        enemyActionLabel.Text = "Enemy Attacks and deals " + (enemy.Damage * 0.8f) + " damage";
+                    }
+                    else
+                    {
+                        enemyActionLabel.Text = "Enemy Attacks and deals " + enemy.Damage + " damage";
+                    }
+                    break;
+                case 2:
+                    enemyActionLabel.Text = "Enemy Defends";
+                    break;
+                case 3:
+                    enemyActionLabel.Text = "Enemy Heals";
+                    break;
+                default:
+                    //Error
+                    break;
+            }
+        }
+
+        private void HPCheck()
+        {
+            if (player.CurrentHp <= 0)
+            {
+                Session.Clear();
+                Response.Redirect("~/Default.aspx");
+            }
+
+            if (enemy.CurrentHp <= 0)
+            {
+                Session["enemy"] = battleFunc.CreateEnemy();
+
+                Response.Redirect("~/Exploration.aspx");
+            }
         }
     }
 }
