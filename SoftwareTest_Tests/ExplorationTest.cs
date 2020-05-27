@@ -1,16 +1,6 @@
-<<<<<<< HEAD
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using SoftwareTestExamProject;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-=======
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using SoftwareTestExamProject.Functionality;
->>>>>>> b9d0db1f9a612c5f7269117da930eb3e965bace8
 
 namespace SoftwareTest_Tests
 {
