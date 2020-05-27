@@ -1,5 +1,7 @@
-﻿using System;
+﻿using SoftwareTestExamProject.Functionality;
+using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -9,79 +11,53 @@ namespace SoftwareTestExamProject
 {
     public partial class Exploration : System.Web.UI.Page
     {
-        private string mapString = "Label";
-        private int mapSizeY = 4, mapSizeX = 4;
         Player player;
+       public ExplorationFunc exp;
 
         protected void Page_Load(object sender, EventArgs e)
         {
             player = (Player)Session["player"];
-            CreateMap();
-            mapLabel.Text = mapString;
+            exp = new ExplorationFunc(4, 4);
+            mapLabel.Text = exp.CreateMap(player.coordinates);
         }
 
         protected void ButtonUp_Click(object sender, EventArgs e)
         {
-            if (player.coordinates[0] > 0)
-            {
-                player.coordinates[0] -= 1;
-            }
-            CreateMap();
-            mapLabel.Text = mapString;
+            player.coordinates = exp.ButtonUp_Click(player.coordinates);
+            mapLabel.Text = exp.CreateMap(player.coordinates);
+            Encounter();
         }
 
         protected void ButtonDown_Click(object sender, EventArgs e)
         {
-            if (player.coordinates[0] < mapSizeY - 1)
-            {
-                player.coordinates[0] += 1;
-            }
-            CreateMap();
-            mapLabel.Text = mapString;
+            player.coordinates = exp.ButtonDown_Click(player.coordinates);
+            mapLabel.Text = exp.CreateMap(player.coordinates);
+            Encounter();
         }
 
         protected void ButtonLeft_Click(object sender, EventArgs e)
         {
-            if (player.coordinates[1] > 0)
-            {
-                player.coordinates[1] -= 1;
-            }
-
-            CreateMap();
-            mapLabel.Text = mapString;
+            player.coordinates = exp.ButtonLeft_Click(player.coordinates);
+            mapLabel.Text = exp.CreateMap(player.coordinates);
+            Encounter();
         }
 
         protected void ButtonRight_Click(object sender, EventArgs e)
         {
-            if (player.coordinates[1] < mapSizeX - 1)
-            {
-                player.coordinates[1] += 1;
-            }
-
-            CreateMap();
-            mapLabel.Text = mapString;
+            player.coordinates = exp.ButtonRight_Click(player.coordinates);
+            mapLabel.Text = exp.CreateMap(player.coordinates);
+            Encounter();
         }
 
-        private void CreateMap()
+        private void Encounter()
         {
-            mapString = "";
-            for (int x = 0; x < mapSizeX; x++)
-            {
-                for (int y = 0; y < mapSizeY; y++)
-                {
-                    // Tilføj antal rækker 
-                    if (player.coordinates[0] == x && player.coordinates[1] == y)
-                    {
-                        mapString = mapString + "|_+_|";
-                    }
-                    else
-                    {
-                        mapString = mapString + "|___|";
-                    }
-                }
-                mapString += "<br>";
-            }
+            Random rnd = new Random();
+            int tmpRnd = rnd.Next(0, 5);
 
+            if (tmpRnd <= 2)
+            {
+                Response.Redirect("~/Battle.aspx");
+            }
         }
     }
 }

@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Text.RegularExpressions;
+using SoftwareTestExamProject.Functionality;
 
 namespace SoftwareTestExamProject
 {
@@ -66,19 +67,6 @@ namespace SoftwareTestExamProject
         }
     }
 
-    public abstract class Character
-    {
-        //Properties
-        protected string Name { get; set; }
-        protected int Health { get; set; }
-        protected int Damage { get; set; }
-
-        //Abstract methods
-        protected abstract void Attack();
-        protected abstract void Defend();
-        protected abstract void Heal();
-    }
-
     public class Player : Character
     {
         
@@ -91,17 +79,17 @@ namespace SoftwareTestExamProject
             this.Damage = damage;
         }
 
-        protected override void Attack()
+        public override void Attack()
         {
 
         }
 
-        protected override void Heal()
+        public override void Heal()
         {
 
         }
 
-        protected override void Defend()
+        public override void Defend()
         {
 
         }
@@ -117,17 +105,17 @@ namespace SoftwareTestExamProject
 
         }
 
-        protected override void Attack()
+        public override void Attack()
         {
 
         }
 
-        protected override void Heal()
+        public override void Heal()
         {
 
         }
 
-        protected override void Defend()
+        public override void Defend()
         {
 
         }

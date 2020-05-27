@@ -15,6 +15,15 @@ namespace SoftwareTestExamProject
     {
 
         /// <summary>
+        /// buttonleft control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button buttonleft;
+
+        /// <summary>
         /// ButtonUp control.
         /// </summary>
         /// <remarks>
@@ -24,13 +33,13 @@ namespace SoftwareTestExamProject
         protected global::System.Web.UI.WebControls.Button ButtonUp;
 
         /// <summary>
-        /// ButtonLeft control.
+        /// ButtonRight control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button ButtonLeft;
+        protected global::System.Web.UI.WebControls.Button ButtonRight;
 
         /// <summary>
         /// mapLabel control.
@@ -40,15 +49,6 @@ namespace SoftwareTestExamProject
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label mapLabel;
-
-        /// <summary>
-        /// ButtonRight control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button ButtonRight;
 
         /// <summary>
         /// ButtonDown control.
