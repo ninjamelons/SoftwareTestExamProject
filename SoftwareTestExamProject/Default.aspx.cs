@@ -29,12 +29,12 @@ namespace SoftwareTestExamProject
 
             if (nameInput == "-1")
             {
-                ErrorLabel.Text += "Please input a valid Name (a-Å/numbers).<br>";
+                ErrorLabel.Text += "Please input a valid Name (a-Å/numbers).";
                 fail = true;
             }
             if (hpInput == -1)
             {
-                ErrorLabel.Text += "Please input a valid number for Health (1-1000).<br>";
+                ErrorLabel.Text += "Please input a valid number for Health (1-1000).";
                 fail = true;
             }
             if (dmgInput == -1)
