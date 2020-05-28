@@ -23,19 +23,33 @@ namespace SoftwareTestExamProject
 
         protected void CreateCharacter_Click(object sender, EventArgs e)
         {
-            player = new Player(nameInput, hpInput, dmgInput);
+            ErrorLabel.Text = "";
 
-            Session["player"] = player;
+            bool fail = false;
 
-            if (hpInput != -1 && dmgInput != -1 && nameInput != "-1")
+            if (nameInput == "-1")
             {
+                ErrorLabel.Text += "Please input a valid Name (a-Å/numbers).<br>";
+                fail = true;
+            }
+            if (hpInput == -1)
+            {
+                ErrorLabel.Text += "Please input a valid number for Health (1-1000).<br>";
+                fail = true;
+            }
+            if (dmgInput == -1)
+            {
+                ErrorLabel.Text += "Please input a valid number for Damage (1-100).";
+                fail = true;
+            }
+
+            if(!fail)
+            {
+                player = new Player(nameInput, hpInput, dmgInput);
+                Session["player"] = player;
+
                 //Redirect to the Exploration page
                 Response.Redirect("~/Exploration.aspx");
-            }
-            else
-            {
-                ErrorLabel.Text = "";
-                ErrorLabel.Text += "Please input a valid number for Health (1-1000)";
             }
         }
 
@@ -46,23 +60,12 @@ namespace SoftwareTestExamProject
 
         protected void HPTextBox_TextChanged(object sender, EventArgs e)
         {
-            int tmpPlayerHp = input.HPInput(HPTextBox.Text);
-
-            hpInput = tmpPlayerHp;
+            hpInput = input.HPInput(HPTextBox.Text);
         }
 
         protected void DMGTextBox_TextChanged(object sender, EventArgs e)
         {
-            int tmpPlayerDmg = input.DMGInput(DMGTextBox.Text);
-
-            if (tmpPlayerDmg == -1)
-            {
-                ErrorLabel.Text += "Please input a valid number (1-100). ";
-            }
-            else
-            {
-                dmgInput = tmpPlayerDmg;
-            }
+            dmgInput = input.DMGInput(DMGTextBox.Text);
         }
     }
 }
