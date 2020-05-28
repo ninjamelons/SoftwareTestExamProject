@@ -102,7 +102,6 @@ namespace SoftwareTest_Tests
 
         #endregion
 
-
         #region Player heals
 
         //Testing player heal, enemy attack

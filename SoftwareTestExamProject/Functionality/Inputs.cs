@@ -26,7 +26,7 @@ namespace SoftwareTestExamProject.Functionality
             */
             var regexItem = new Regex("^[ÆØÅæøåa-zA-Z0-9]*$");
 
-            if (input.Length < 40 && regexItem.IsMatch(input) == true && input.Length > 0)
+            if (input.Length <= 40 && regexItem.IsMatch(input) == true && input.Length > 0)
             {
                 result = input;
             }
@@ -44,7 +44,7 @@ namespace SoftwareTestExamProject.Functionality
 
             if (Int32.TryParse(input, out int playerHP))
             {
-                if (playerHP < 0 && playerHP > 1000)
+                if (playerHP <= 0 || playerHP > 1000)
                 {
                     result = -1;
                 }
@@ -66,7 +66,7 @@ namespace SoftwareTestExamProject.Functionality
             int result;
             if (Int32.TryParse(input, out int playerDMG))
             {
-                if (playerDMG < 0 && playerDMG > 100)
+                if (playerDMG <= 0 || playerDMG > 100)
                 {
                     result = -1;
                 }

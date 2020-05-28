@@ -11,6 +11,7 @@ namespace SoftwareTest_Tests
     {
         Inputs inputs;
 
+        #region character 
         [TestInitialize]
         public void InitializeInputs()
         {
@@ -92,5 +93,34 @@ namespace SoftwareTest_Tests
             //Assert
             Assert.AreEqual(passed, actualPass);
         }
+        #endregion
+
+        #region Player combo invalid inputs
+
+        //testing combinations of multi invalid inputs
+        [TestMethod]
+        [DataRow("<<<>>>>", "500", "256", false, DisplayName = "Invalid name and damage")]
+        [DataRow("Bob", "1234", "256", false, DisplayName = "Invalid health and damage")]
+        [DataRow("<<>>><<>>><", "1234", "50", false, DisplayName = "Invalid health and name")]
+        [DataRow("<<>>><<>>><", "1234", "256", false, DisplayName = "Invalid health and name and damage")]
+        public void TestInputFieldCombinations(string name, string health, string damage, bool passed)
+        {
+            bool actualPass = false;
+
+            //Setup
+            string nameRes = inputs.NameInput(name);
+            int hpRes = inputs.HPInput(health);
+            int dmgRes = inputs.DMGInput(damage);
+
+            Player player = new Player(nameRes, hpRes, dmgRes);
+
+            if (!player.Name.Equals("-1") && player.MaxHp != -1 && player.Damage != -1)
+                actualPass = true;
+
+            //Assert
+            Assert.AreEqual(passed, actualPass);
+        }
+
+        #endregion
     }
 }
