@@ -1,0 +1,216 @@
+2020-05-28T08:56:57.0324090Z ##[section]Starting: VSTest
+2020-05-28T08:56:57.0468475Z ==============================================================================
+2020-05-28T08:56:57.0468847Z Task         : Visual Studio Test
+2020-05-28T08:56:57.0469600Z Description  : Run unit and functional tests (Selenium, Appium, Coded UI test, etc.) using the Visual Studio Test (VsTest) runner. Test frameworks that have a Visual Studio test adapter such as MsTest, xUnit, NUnit, Chutzpah (for JavaScript tests using QUnit, Mocha and Jasmine), etc. can be run. Tests can be distributed on multiple agents using this task (version 2).
+2020-05-28T08:56:57.0470972Z Version      : 2.169.0
+2020-05-28T08:56:57.0471233Z Author       : Microsoft Corporation
+2020-05-28T08:56:57.0471559Z Help         : https://docs.microsoft.com/azure/devops/pipelines/tasks/test/vstest
+2020-05-28T08:56:57.0471946Z ==============================================================================
+2020-05-28T08:56:57.8564865Z SystemVssConnection exists true
+2020-05-28T08:56:57.9544693Z SystemVssConnection exists true
+2020-05-28T08:56:58.0473089Z Running tests using vstest.console.exe runner.
+2020-05-28T08:56:58.0474629Z ======================================================
+2020-05-28T08:56:58.0475897Z Test selector : Test assemblies
+2020-05-28T08:56:58.0476512Z Test filter criteria : null
+2020-05-28T08:56:58.0478401Z Search folder : d:\a\1\s
+2020-05-28T08:56:58.0981767Z Action when minimum tests threshold not met : donothing
+2020-05-28T08:56:58.0983533Z Minimum tests expected to be run: 0
+2020-05-28T08:56:58.0985751Z VisualStudio version selected for test execution : latest
+2020-05-28T08:56:58.0990479Z Attempting to find vstest.console from a visual studio installation with version [16.0,17.0).
+2020-05-28T08:56:58.1001591Z Run in parallel : false
+2020-05-28T08:56:58.1002880Z Run in isolation : false
+2020-05-28T08:56:58.1003405Z Path to custom adapters : null
+2020-05-28T08:56:58.1004963Z Other console options : null
+2020-05-28T08:56:58.1006332Z Code coverage enabled : false
+2020-05-28T08:56:58.1007085Z Diagnostics enabled : false
+2020-05-28T08:56:58.1012412Z SystemVssConnection exists true
+2020-05-28T08:56:58.1030946Z Run the tests locally using vstest.console.exe
+2020-05-28T08:56:58.1031862Z ========================================================
+2020-05-28T08:56:58.1091724Z Source filter: **\*test*.dll,!**\*TestAdapter.dll,!**\obj\**
+2020-05-28T08:56:58.4101317Z SystemVssConnection exists true
+2020-05-28T08:56:58.4103663Z [command]d:\a\_tasks\VSTest_ef087383-ee5e-42c7-9a53-ab56c98420f9\2.169.0\Modules\DTAExecutionHost.exe --inputFile d:\a\_temp\input_300e3070-a0c1-11ea-b630-557e25d44494.json
+2020-05-28T08:56:58.4104659Z ======================================================
+2020-05-28T08:56:58.5576347Z ##########################################################################
+2020-05-28T08:56:58.5576981Z DtaExecutionHost version 18.169.30115.1.
+2020-05-28T08:56:58.9309814Z Starting TestExecution Model...
+2020-05-28T08:57:00.4108499Z Result Attachments will be stored in LogStore
+2020-05-28T08:57:00.4369678Z Run Attachments will be stored in LogStore
+2020-05-28T08:57:00.4475677Z Result Attachments will be stored in LogStore
+2020-05-28T08:57:00.4811726Z Result Attachments will be stored in LogStore
+2020-05-28T08:57:00.4812815Z Run Attachments will be stored in LogStore
+2020-05-28T08:57:00.5144924Z Updated Run Settings:
+2020-05-28T08:57:00.5159005Z <RunSettings>
+2020-05-28T08:57:00.5159448Z   <RunConfiguration>
+2020-05-28T08:57:00.5159791Z     <BatchSize>1000</BatchSize>
+2020-05-28T08:57:00.5160230Z     <ResultsDirectory>d:\a\_temp\TestResults</ResultsDirectory>
+2020-05-28T08:57:00.5160498Z   </RunConfiguration>
+2020-05-28T08:57:00.5160684Z </RunSettings>
+2020-05-28T08:57:00.5267426Z **************** Starting test execution *********************
+2020-05-28T08:57:00.5402515Z [command]C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\Common7\IDE\Extensions\TestPlatform\vstest.console.exe "@d:\a\_temp\4reuuox3rt2.tmp"
+2020-05-28T08:57:00.7078918Z Microsoft (R) Test Execution Command Line Tool Version 16.5.0
+2020-05-28T08:57:00.7115320Z Copyright (c) Microsoft Corporation.  All rights reserved.
+2020-05-28T08:57:00.7234182Z vstest.console.exe "d:\a\1\s\SoftwareTestExamProject\bin\SoftwareTestExamProject.dll"
+2020-05-28T08:57:00.7235085Z "d:\a\1\s\SoftwareTest_Tests\bin\Release\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll"
+2020-05-28T08:57:00.7236206Z "d:\a\1\s\SoftwareTest_Tests\bin\Release\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll"
+2020-05-28T08:57:00.7236982Z "d:\a\1\s\SoftwareTest_Tests\bin\Release\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll"
+2020-05-28T08:57:00.7237662Z "d:\a\1\s\SoftwareTest_Tests\bin\Release\Microsoft.VisualStudio.TestPlatform.TestFramework.dll"
+2020-05-28T08:57:00.7238202Z "d:\a\1\s\SoftwareTest_Tests\bin\Release\SoftwareTestExamProject.dll"
+2020-05-28T08:57:00.7238688Z "d:\a\1\s\SoftwareTest_Tests\bin\Release\SoftwareTest_Tests.dll"
+2020-05-28T08:57:00.7239334Z "d:\a\1\s\packages\MSTest.TestAdapter.2.1.0\build\_common\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll"
+2020-05-28T08:57:00.7240136Z "d:\a\1\s\packages\MSTest.TestAdapter.2.1.0\build\_common\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll"
+2020-05-28T08:57:00.7240879Z "d:\a\1\s\packages\MSTest.TestAdapter.2.1.0\build\_common\Microsoft.VisualStudio.TestPlatform.TestFramework.dll"
+2020-05-28T08:57:00.7241805Z "d:\a\1\s\packages\MSTest.TestAdapter.2.1.0\build\_common\cs\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.resources.dll"
+2020-05-28T08:57:00.7243535Z "d:\a\1\s\packages\MSTest.TestAdapter.2.1.0\build\_common\cs\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.resources.dll"
+2020-05-28T08:57:00.7244547Z "d:\a\1\s\packages\MSTest.TestAdapter.2.1.0\build\_common\cs\Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll"
+2020-05-28T08:57:00.7245417Z "d:\a\1\s\packages\MSTest.TestAdapter.2.1.0\build\_common\de\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.resources.dll"
+2020-05-28T08:57:00.7246448Z "d:\a\1\s\packages\MSTest.TestAdapter.2.1.0\build\_common\de\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.resources.dll"
+2020-05-28T08:57:00.7247070Z "d:\a\1\s\packages\MSTest.TestAdapter.2.1.0\build\_common\de\Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll"
+2020-05-28T08:57:00.7247586Z "d:\a\1\s\packages\MSTest.TestAdapter.2.1.0\build\_common\es\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.resources.dll"
+2020-05-28T08:57:00.7248447Z "d:\a\1\s\packages\MSTest.TestAdapter.2.1.0\build\_common\es\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.resources.dll"
+2020-05-28T08:57:00.7248917Z "d:\a\1\s\packages\MSTest.TestAdapter.2.1.0\build\_common\es\Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll"
+2020-05-28T08:57:00.7249370Z "d:\a\1\s\packages\MSTest.TestAdapter.2.1.0\build\_common\fr\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.resources.dll"
+2020-05-28T08:57:00.7249865Z "d:\a\1\s\packages\MSTest.TestAdapter.2.1.0\build\_common\fr\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.resources.dll"
+2020-05-28T08:57:00.7250346Z "d:\a\1\s\packages\MSTest.TestAdapter.2.1.0\build\_common\fr\Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll"
+2020-05-28T08:57:00.7250797Z "d:\a\1\s\packages\MSTest.TestAdapter.2.1.0\build\_common\it\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.resources.dll"
+2020-05-28T08:57:00.7251293Z "d:\a\1\s\packages\MSTest.TestAdapter.2.1.0\build\_common\it\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.resources.dll"
+2020-05-28T08:57:00.7251943Z "d:\a\1\s\packages\MSTest.TestAdapter.2.1.0\build\_common\it\Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll"
+2020-05-28T08:57:00.7252426Z "d:\a\1\s\packages\MSTest.TestAdapter.2.1.0\build\_common\ja\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.resources.dll"
+2020-05-28T08:57:00.7253606Z "d:\a\1\s\packages\MSTest.TestAdapter.2.1.0\build\_common\ja\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.resources.dll"
+2020-05-28T08:57:00.7254089Z "d:\a\1\s\packages\MSTest.TestAdapter.2.1.0\build\_common\ja\Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll"
+2020-05-28T08:57:00.7254574Z "d:\a\1\s\packages\MSTest.TestAdapter.2.1.0\build\_common\ko\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.resources.dll"
+2020-05-28T08:57:00.7255150Z "d:\a\1\s\packages\MSTest.TestAdapter.2.1.0\build\_common\ko\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.resources.dll"
+2020-05-28T08:57:00.7255821Z "d:\a\1\s\packages\MSTest.TestAdapter.2.1.0\build\_common\ko\Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll"
+2020-05-28T08:57:00.7256275Z "d:\a\1\s\packages\MSTest.TestAdapter.2.1.0\build\_common\pl\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.resources.dll"
+2020-05-28T08:57:00.7256771Z "d:\a\1\s\packages\MSTest.TestAdapter.2.1.0\build\_common\pl\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.resources.dll"
+2020-05-28T08:57:00.7257255Z "d:\a\1\s\packages\MSTest.TestAdapter.2.1.0\build\_common\pl\Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll"
+2020-05-28T08:57:00.7257710Z "d:\a\1\s\packages\MSTest.TestAdapter.2.1.0\build\_common\pt\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.resources.dll"
+2020-05-28T08:57:00.7258208Z "d:\a\1\s\packages\MSTest.TestAdapter.2.1.0\build\_common\pt\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.resources.dll"
+2020-05-28T08:57:00.7259541Z "d:\a\1\s\packages\MSTest.TestAdapter.2.1.0\build\_common\pt\Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll"
+2020-05-28T08:57:00.7260140Z "d:\a\1\s\packages\MSTest.TestAdapter.2.1.0\build\_common\ru\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.resources.dll"
+2020-05-28T08:57:00.7260705Z "d:\a\1\s\packages\MSTest.TestAdapter.2.1.0\build\_common\ru\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.resources.dll"
+2020-05-28T08:57:00.7261285Z "d:\a\1\s\packages\MSTest.TestAdapter.2.1.0\build\_common\ru\Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll"
+2020-05-28T08:57:00.7261838Z "d:\a\1\s\packages\MSTest.TestAdapter.2.1.0\build\_common\tr\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.resources.dll"
+2020-05-28T08:57:00.7262552Z "d:\a\1\s\packages\MSTest.TestAdapter.2.1.0\build\_common\tr\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.resources.dll"
+2020-05-28T08:57:00.7263194Z "d:\a\1\s\packages\MSTest.TestAdapter.2.1.0\build\_common\tr\Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll"
+2020-05-28T08:57:00.7263820Z "d:\a\1\s\packages\MSTest.TestAdapter.2.1.0\build\_common\zh-Hans\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.resources.dll"
+2020-05-28T08:57:00.7264330Z "d:\a\1\s\packages\MSTest.TestAdapter.2.1.0\build\_common\zh-Hans\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.resources.dll"
+2020-05-28T08:57:00.7265008Z "d:\a\1\s\packages\MSTest.TestAdapter.2.1.0\build\_common\zh-Hans\Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll"
+2020-05-28T08:57:00.7265694Z "d:\a\1\s\packages\MSTest.TestAdapter.2.1.0\build\_common\zh-Hant\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.resources.dll"
+2020-05-28T08:57:00.7266234Z "d:\a\1\s\packages\MSTest.TestAdapter.2.1.0\build\_common\zh-Hant\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.resources.dll"
+2020-05-28T08:57:00.7266754Z "d:\a\1\s\packages\MSTest.TestAdapter.2.1.0\build\_common\zh-Hant\Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll"
+2020-05-28T08:57:00.7267498Z "d:\a\1\s\packages\MSTest.TestAdapter.2.1.0\build\netcoreapp1.0\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll"
+2020-05-28T08:57:00.7268374Z "d:\a\1\s\packages\MSTest.TestAdapter.2.1.0\build\uap10.0\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll"
+2020-05-28T08:57:00.7269110Z "d:\a\1\s\packages\MSTest.TestFramework.2.1.0\lib\net45\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll"
+2020-05-28T08:57:00.7269551Z "d:\a\1\s\packages\MSTest.TestFramework.2.1.0\lib\net45\Microsoft.VisualStudio.TestPlatform.TestFramework.dll"
+2020-05-28T08:57:00.7269991Z "d:\a\1\s\packages\MSTest.TestFramework.2.1.0\lib\netstandard1.0\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll"
+2020-05-28T08:57:00.7270519Z "d:\a\1\s\packages\MSTest.TestFramework.2.1.0\lib\netstandard1.0\Microsoft.VisualStudio.TestPlatform.TestFramework.dll"
+2020-05-28T08:57:00.7271113Z "d:\a\1\s\packages\MSTest.TestFramework.2.1.0\lib\uap10.0\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll"
+2020-05-28T08:57:00.7271542Z "d:\a\1\s\packages\MSTest.TestFramework.2.1.0\lib\uap10.0\Microsoft.VisualStudio.TestPlatform.TestFramework.dll"
+2020-05-28T08:57:00.7271867Z /Settings:"d:\a\_temp\2302j0hir3v.tmp.runsettings"
+2020-05-28T08:57:00.7272081Z /Logger:"trx"
+2020-05-28T08:57:00.7272247Z /TestAdapterPath:"d:\a\1\s"
+2020-05-28T08:57:02.1770798Z Starting test execution, please wait...
+2020-05-28T08:57:02.6411631Z Test run will use DLL(s) built for framework .NETFramework,Version=v4.0 and platform X86. Following DLL(s) do not match framework/platform settings.
+2020-05-28T08:57:02.6412597Z SoftwareTestExamProject.dll is built for Framework .NETFramework,Version=v4.7.2 and Platform AnyCPU.
+2020-05-28T08:57:02.6414362Z Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll is built for Framework .NETPortable,Version=v4.5,Profile=Profile259 and Platform AnyCPU.
+2020-05-28T08:57:02.6415935Z Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll is built for Framework .NETFramework,Version=v4.5 and Platform AnyCPU.
+2020-05-28T08:57:02.6417101Z Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll is built for Framework .NETFramework,Version=v4.5 and Platform AnyCPU.
+2020-05-28T08:57:02.6418466Z Microsoft.VisualStudio.TestPlatform.TestFramework.dll is built for Framework .NETPortable,Version=v4.5,Profile=Profile259 and Platform AnyCPU.
+2020-05-28T08:57:02.6420079Z SoftwareTestExamProject.dll is built for Framework .NETFramework,Version=v4.7.2 and Platform AnyCPU.
+2020-05-28T08:57:02.6421319Z SoftwareTest_Tests.dll is built for Framework .NETFramework,Version=v4.7.2 and Platform AnyCPU.
+2020-05-28T08:57:02.6423862Z Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll is built for Framework .NETPortable,Version=v4.5,Profile=Profile259 and Platform AnyCPU.
+2020-05-28T08:57:02.6425424Z Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll is built for Framework .NETFramework,Version=v4.5 and Platform AnyCPU.
+2020-05-28T08:57:02.6427042Z Microsoft.VisualStudio.TestPlatform.TestFramework.dll is built for Framework .NETPortable,Version=v4.5,Profile=Profile259 and Platform AnyCPU.
+2020-05-28T08:57:02.6428196Z Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll is built for Framework .NETStandard,Version=v1.5 and Platform AnyCPU.
+2020-05-28T08:57:02.6429509Z Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll is built for Framework .NETCore,Version=v5.0 and Platform AnyCPU.
+2020-05-28T08:57:02.6430712Z Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll is built for Framework .NETFramework,Version=v4.5 and Platform AnyCPU.
+2020-05-28T08:57:02.6431590Z Microsoft.VisualStudio.TestPlatform.TestFramework.dll is built for Framework .NETPortable,Version=v4.5,Profile=Profile259 and Platform AnyCPU.
+2020-05-28T08:57:02.6432526Z Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll is built for Framework .NETPortable,Version=v4.5,Profile=Profile259 and Platform AnyCPU.
+2020-05-28T08:57:02.6433919Z Microsoft.VisualStudio.TestPlatform.TestFramework.dll is built for Framework .NETPortable,Version=v4.5,Profile=Profile259 and Platform AnyCPU.
+2020-05-28T08:57:02.6437118Z Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll is built for Framework .NETCore,Version=v5.0 and Platform AnyCPU.
+2020-05-28T08:57:02.6438746Z Microsoft.VisualStudio.TestPlatform.TestFramework.dll is built for Framework .NETPortable,Version=v4.5,Profile=Profile259 and Platform AnyCPU.
+2020-05-28T08:57:02.6439879Z Go to http://go.microsoft.com/fwlink/?LinkID=236877&clcid=0x409 for more details on managing these settings.
+2020-05-28T08:57:03.3044742Z A total of 57 test files matched the specified pattern.
+2020-05-28T08:57:04.0815167Z [MSTest][Discovery][d:\a\1\s\packages\MSTest.TestAdapter.2.1.0\build\_common\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll] Unable to load types from the test source 'd:\a\1\s\packages\MSTest.TestAdapter.2.1.0\build\_common\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll'. Some or all of the tests in this source may not be discovered.
+2020-05-28T08:57:04.0817876Z Error: System.IO.FileNotFoundException: Could not load file or assembly 'Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a' or one of its dependencies. The system cannot find the file specified.
+2020-05-28T08:57:04.5287688Z [MSTest][Discovery][d:\a\1\s\packages\MSTest.TestAdapter.2.1.0\build\netcoreapp1.0\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll] Unable to load types from the test source 'd:\a\1\s\packages\MSTest.TestAdapter.2.1.0\build\netcoreapp1.0\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll'. Some or all of the tests in this source may not be discovered.
+2020-05-28T08:57:04.5290708Z Error: System.IO.FileNotFoundException: Could not load file or assembly 'Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a' or one of its dependencies. The system cannot find the file specified.
+2020-05-28T08:57:04.7719603Z [MSTest][Discovery][d:\a\1\s\packages\MSTest.TestAdapter.2.1.0\build\uap10.0\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll] Unable to load types from the test source 'd:\a\1\s\packages\MSTest.TestAdapter.2.1.0\build\uap10.0\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll'. Some or all of the tests in this source may not be discovered.
+2020-05-28T08:57:04.7721967Z Error: System.IO.FileNotFoundException: Could not load file or assembly 'Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a' or one of its dependencies. The system cannot find the file specified.
+2020-05-28T08:57:06.5103666Z   âˆš Test_BattleSim_Player_Attacks [15ms]
+2020-05-28T08:57:06.5105356Z   âˆš Player Attack  [9ms]
+2020-05-28T08:57:06.5105977Z   âˆš Player Attack - min damage [< 1ms]
+2020-05-28T08:57:06.5107136Z   âˆš Player Attack - max damage [< 1ms]
+2020-05-28T08:57:06.5109679Z   âˆš Test_BattleSim_Enemy_Defends [< 1ms]
+2020-05-28T08:57:06.5110807Z   âˆš Player Attack, Enemy Defend [< 1ms]
+2020-05-28T08:57:06.5111735Z   âˆš Player Attack, min damage [< 1ms]
+2020-05-28T08:57:06.5112786Z   âˆš Player Attack, max damage [< 1ms]
+2020-05-28T08:57:06.5115035Z   âˆš Test_BattleSim_Enemy_Heals [< 1ms]
+2020-05-28T08:57:06.5115822Z   âˆš Player Attack, Enemy Heals [< 1ms]
+2020-05-28T08:57:06.5116931Z   âˆš Player Attack, Enemy Heals [< 1ms]
+2020-05-28T08:57:06.5119310Z   âˆš Player Attack, Enemy Heals [< 1ms]
+2020-05-28T08:57:06.5121029Z   âˆš Test_BattleSim_Player_Defends [1ms]
+2020-05-28T08:57:06.5122086Z   âˆš Player Defends [< 1ms]
+2020-05-28T08:57:06.5123624Z   âˆš Player Defends maxHp [< 1ms]
+2020-05-28T08:57:06.5124962Z   âˆš Player Defends minHP [< 1ms]
+2020-05-28T08:57:06.5127111Z   âˆš Test_BattleSim_Player_Heals [< 1ms]
+2020-05-28T08:57:06.5128237Z   âˆš Player Heals [< 1ms]
+2020-05-28T08:57:06.5128991Z   âˆš Player Heals maxHp [< 1ms]
+2020-05-28T08:57:06.5130659Z   âˆš Player Heals minHP [< 1ms]
+2020-05-28T08:57:06.5131671Z   âˆš TestValidNameInputs [66ms]
+2020-05-28T08:57:06.5133786Z   âˆš String length = 1 Lower Valid [64ms]
+2020-05-28T08:57:06.5136178Z   âˆš String length = 40 Upper Valid [< 1ms]
+2020-05-28T08:57:06.5136939Z   âˆš Valid characters [< 1ms]
+2020-05-28T08:57:06.5137617Z   âˆš TestInvalidNameInputs [< 1ms]
+2020-05-28T08:57:06.5140635Z   âˆš String length = 0 Lower Invalid [< 1ms]
+2020-05-28T08:57:06.5141674Z   âˆš String length = 41 Upper Invalid [< 1ms]
+2020-05-28T08:57:06.5142892Z   âˆš Invalid Symbols [< 1ms]
+2020-05-28T08:57:06.5144559Z   âˆš TestHealthBoundariesAndCharacters [1ms]
+2020-05-28T08:57:06.5146504Z   âˆš Lower Invalid [1ms]
+2020-05-28T08:57:06.5150491Z   âˆš Upper Invalid [< 1ms]
+2020-05-28T08:57:06.5190876Z   âˆš Lower Valid [< 1ms]
+2020-05-28T08:57:06.5191738Z   âˆš Upper Valid [< 1ms]
+2020-05-28T08:57:06.5192548Z   âˆš Invalid Characters [< 1ms]
+2020-05-28T08:57:06.5193097Z   âˆš TestDamageBoundariesAndCharacters [< 1ms]
+2020-05-28T08:57:06.5194801Z   âˆš Lower Invalid [< 1ms]
+2020-05-28T08:57:06.5195233Z   âˆš Upper Invalid [< 1ms]
+2020-05-28T08:57:06.5196093Z   âˆš Lower Valid [< 1ms]
+2020-05-28T08:57:06.5196549Z   âˆš Upper Valid [< 1ms]
+2020-05-28T08:57:06.5197026Z   âˆš Invalid Characters [< 1ms]
+2020-05-28T08:57:06.5198073Z   âˆš TestInputFieldCombinations [< 1ms]
+2020-05-28T08:57:06.5198538Z   âˆš Invalid name and damage [< 1ms]
+2020-05-28T08:57:06.5199021Z   âˆš Invalid health and damage [< 1ms]
+2020-05-28T08:57:06.5199589Z   âˆš Invalid health and name [< 1ms]
+2020-05-28T08:57:06.5200701Z   âˆš Invalid health and name and damage [< 1ms]
+2020-05-28T08:57:06.5202536Z   âˆš TestMoveUp [1ms]
+2020-05-28T08:57:06.5203653Z   âˆš Valid move up [1ms]
+2020-05-28T08:57:06.5204420Z   âˆš Invalid move up [< 1ms]
+2020-05-28T08:57:06.5206746Z   âˆš TestMoveDown [< 1ms]
+2020-05-28T08:57:06.5212497Z   âˆš Valid move down [< 1ms]
+2020-05-28T08:57:06.5214069Z   âˆš Invalid move down [< 1ms]
+2020-05-28T08:57:06.5215949Z   âˆš TestMoveLeft [< 1ms]
+2020-05-28T08:57:06.5217874Z   âˆš Valid move down [< 1ms]
+2020-05-28T08:57:06.5219850Z   âˆš Invalid move down [< 1ms]
+2020-05-28T08:57:06.5221107Z   âˆš TestMoveRight [< 1ms]
+2020-05-28T08:57:06.5221686Z   âˆš Valid move down [< 1ms]
+2020-05-28T08:57:06.5222086Z   âˆš Invalid move down [< 1ms]
+2020-05-28T08:57:06.5222525Z   âˆš TestRandomEncounter [38ms]
+2020-05-28T08:57:06.5223009Z   âˆš TestRandomEncounter (2,True) [< 1ms]
+2020-05-28T08:57:06.5223654Z   âˆš TestRandomEncounter (3,False) [< 1ms]
+2020-05-28T08:57:06.5642389Z Results File: d:\a\_temp\TestResults\VssAdministrator_WIN-39PT4IVKCI8_2020-05-28_08_57_06.trx
+2020-05-28T08:57:06.5681578Z Test Run Successful.
+2020-05-28T08:57:06.5682436Z Total tests: 45
+2020-05-28T08:57:06.5683248Z      Passed: 45
+2020-05-28T08:57:06.5697729Z  Total time: 3.6843 Seconds
+2020-05-28T08:57:06.5904367Z Vstest.console.exe exited with code 0.
+2020-05-28T08:57:06.5905426Z **************** Completed test execution *********************
+2020-05-28T08:57:06.5998141Z Test results files: d:\a\_temp\TestResults\VssAdministrator_WIN-39PT4IVKCI8_2020-05-28_08_57_06.trx
+2020-05-28T08:57:06.9291981Z Created test run: 6
+2020-05-28T08:57:06.9295435Z Publishing test results: 15
+2020-05-28T08:57:07.0642654Z Publishing test results to test run '6'.
+2020-05-28T08:57:07.0677525Z TestResults To Publish 15, Test run id:6
+2020-05-28T08:57:07.0784201Z Test results publishing 15, remaining: 0. Test run id: 6
+2020-05-28T08:57:07.3999624Z Published test results: 15
+2020-05-28T08:57:07.4009009Z Publishing Attachments: 1
+2020-05-28T08:57:08.4367971Z Completed TestExecution Model...
+2020-05-28T08:57:08.4828145Z ##[section]Finishing: VSTest
