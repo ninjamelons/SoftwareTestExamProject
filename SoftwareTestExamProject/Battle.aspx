@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Battle.aspx.cs" Inherits="SoftwareTestExamProject.Battle" %>
+﻿<%@ Page Title="Battle" Language="C#" AutoEventWireup="true" CodeBehind="Battle.aspx.cs" Inherits="SoftwareTestExamProject.Battle" %>
 
 <!DOCTYPE html>
 

@@ -3,11 +3,12 @@ using System.Threading;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
+using SoftwareTestExamProject.Functionality;
 
 namespace SoftwareTest_Tests
 {
     [TestClass]
-    public class Selenium
+    public class SeleniumCreate
     {
         const string nameInvalid = "Please input a valid Name (a-Å/numbers).";
         const string hpInvalid = "Please input a valid number for Health (1-1000).";
@@ -95,7 +96,6 @@ namespace SoftwareTest_Tests
             elementBut.Click();
 
             var handle = driver.Title;
-
             Assert.AreEqual("Exploration - My ASP.NET Application", handle);
         }
     }
