@@ -106,7 +106,7 @@ namespace SoftwareTest_Tests
         public void TestInputFieldCombinations(string name, string health, string damage, bool passed)
         {
             bool actualPass = false;
-
+            //test new for CI
             //Setup
             string nameRes = inputs.NameInput(name);
             int hpRes = inputs.HPInput(health);
