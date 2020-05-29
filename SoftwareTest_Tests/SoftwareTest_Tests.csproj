@@ -57,9 +57,9 @@
     <Compile Include="CharacterTest.cs" />
     <Compile Include="ExplorationTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SeleninumExploration.cs" />
-    <Compile Include="SeleniumCombat.cs" />
-    <Compile Include="SeleniumCreate.cs" />
+    <Compile Include="seleniumTest\SeleninumExploration.cs" />
+    <Compile Include="seleniumTest\SeleniumCombat.cs" />
+    <Compile Include="seleniumTest\SeleniumCreate.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
