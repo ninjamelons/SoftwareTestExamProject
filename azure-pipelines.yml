@@ -36,8 +36,8 @@ steps:
       **\*test*.dll
       !**\*TestAdapter.dll
       !**\obj\**
-      !**\seleniumTest\**
-      !**\**\SeleniumExploration.cs
-      !**\SeleniumCreate.cs
+      !seleniumTest\**
     searchFolder: '$(System.DefaultWorkingDirectory)'
+
+
 
