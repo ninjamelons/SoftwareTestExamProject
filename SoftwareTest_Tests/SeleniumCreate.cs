@@ -22,6 +22,9 @@ namespace SoftwareTest_Tests
         public void InitializeTest()
         {
             driver = new ChromeDriver();
+
+            // navigate to URL  
+            driver.Navigate().GoToUrl("http://localhost:80/");
         }
 
         [TestCleanup]
@@ -38,10 +41,6 @@ namespace SoftwareTest_Tests
         [DataRow("<<>>><<>>><", "1234", "256", nameInvalid + hpInvalid + damageInvalid, DisplayName = "Invalid health and name and damage")]
         public void TestInvalidCharacterCreate(string name, string health, string damage, string msg)
         {
-            // navigate to URL  
-            driver.Navigate().GoToUrl("http://localhost:64848/");
-            //Thread.Sleep(2000);
-
             // identify the Google search text box  
             IWebElement elementName = driver.FindElement(By.Id("MainContent_NameTextBox"));
             //enter the value in the google search text box  
@@ -72,9 +71,6 @@ namespace SoftwareTest_Tests
         [DataRow("Bob", "500", "50", DisplayName = "Create player")]
         public void TestvalidCharacterCreate(string name, string health, string damage)
         {
-            // navigate to URL  
-            driver.Navigate().GoToUrl("http://localhost:64848/");
-
             // identify the Google search text box  
             IWebElement elementName = driver.FindElement(By.Id("MainContent_NameTextBox"));
             //enter the value in the google search text box  

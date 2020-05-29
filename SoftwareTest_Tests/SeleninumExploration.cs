@@ -18,7 +18,7 @@ namespace SoftwareTest_Tests
             driver = new ChromeDriver();
 
             // navigate to URL  
-            driver.Navigate().GoToUrl("http://localhost:64848/");
+            driver.Navigate().GoToUrl("http://localhost:80/");
 
             // identify the Google search text box  
             IWebElement elementName = driver.FindElement(By.Id("MainContent_NameTextBox"));
