@@ -3,7 +3,7 @@ using System.Text;
 using System.Collections.Generic;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace SoftwareTest_Tests
+namespace SoftwareTest_Tests.seleniumTest
 {
     /// <summary>
     /// Summary description for SeleniumCombat
