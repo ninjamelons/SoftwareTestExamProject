@@ -8,9 +8,10 @@ namespace SoftwareTestExamProject.Functionality
     public class Player : Character
     {
         private bool isDefending = false;
-        public bool IsDefending { get => isDefending; }
 
         public int[] coordinates = { 1, 1 };
+
+        public bool IsDefending { get => isDefending; set => isDefending = value; }
 
         public Player(string name, float health, float damage)
         {
@@ -42,7 +43,7 @@ namespace SoftwareTestExamProject.Functionality
 
         public override void Defend()
         {
-            isDefending = true;
+            IsDefending = true;
         }
     }
 

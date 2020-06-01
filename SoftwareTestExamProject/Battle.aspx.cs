@@ -33,20 +33,29 @@ namespace SoftwareTestExamProject
 
         protected void AttackButton_Click(object sender, EventArgs e)
         {
-            UpdateLabels(1, battleFunc.BattleSimulation(1, new Random().Next(1, 3), player, enemy));
+            UpdateLabels(1, battleFunc.BattleSimulation(1, new Random().Next(1, 4), player, enemy));
             HPCheck();
+            ResetStates();
         }
 
         protected void DefendButton_Click(object sender, EventArgs e)
         {
-            UpdateLabels(2, battleFunc.BattleSimulation(2, new Random().Next(1, 3), player, enemy));
+            UpdateLabels(2, battleFunc.BattleSimulation(2, new Random().Next(1, 4), player, enemy));
             HPCheck();
+            ResetStates();
         }
 
         protected void HealButton_Click(object sender, EventArgs e)
         {
-            UpdateLabels(3, battleFunc.BattleSimulation(3, new Random().Next(1, 3), player, enemy));
+            UpdateLabels(3, battleFunc.BattleSimulation(3, new Random().Next(1, 4), player, enemy));
             HPCheck();
+            ResetStates();
+        }
+
+        private void ResetStates()
+        {
+            player.IsDefending = false;
+            enemy.IsDefending = false;
         }
 
         private void LabelSetup()

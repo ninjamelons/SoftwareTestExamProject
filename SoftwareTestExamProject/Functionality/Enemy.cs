@@ -9,7 +9,7 @@ namespace SoftwareTestExamProject.Functionality
     public class Enemy : Character
     {
         private bool isDefending = false;
-        public bool IsDefending { get => isDefending; }
+        public bool IsDefending { get => isDefending; set => isDefending = value; }
 
         public Enemy(string name, float health, float damage)
         {
