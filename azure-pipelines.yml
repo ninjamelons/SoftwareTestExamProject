@@ -29,12 +29,6 @@ steps:
     configuration: '$(buildConfiguration)'
 
 
-- task: VisualStudioTestPlatformInstaller@1
-  inputs:
-    packageFeedSelector: 'nugetOrg'
-    versionSelector: 'latestPreRelease'
-
-
 - task: VSTest@2
   inputs:
     testSelector: 'testAssemblies'
@@ -42,8 +36,8 @@ steps:
       **\*test*.dll
       !**\*TestAdapter.dll
       !**\obj\**
-      !**\*Selenium*.dll
     searchFolder: '$(System.DefaultWorkingDirectory)'
+    testFiltercriteria: '/Tests: TestValidNameInputs'
 
 - task: PublishBuildArtifacts@1
   inputs:
