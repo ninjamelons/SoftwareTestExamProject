@@ -29,6 +29,7 @@ steps:
     configuration: '$(buildConfiguration)'
 
 
+
 - task: VSTest@2
   inputs:
     testSelector: 'testAssemblies'
@@ -37,7 +38,7 @@ steps:
       !**\*TestAdapter.dll
       !**\obj\**
     searchFolder: '$(System.DefaultWorkingDirectory)'
-    testFiltercriteria: '/Tests: TestValidNameInputs'
+    testFiltercriteria: 'BattleTest.cs'
 
 - task: PublishBuildArtifacts@1
   inputs:
