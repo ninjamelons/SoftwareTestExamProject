@@ -35,7 +35,6 @@ steps:
       **\*test*.dll
       !**\*TestAdapter.dll
       !**\obj\**
-      !**\*Selenium*.dll
     searchFolder: '$(System.DefaultWorkingDirectory)'
 
 - task: PublishBuildArtifacts@1
@@ -43,3 +42,4 @@ steps:
     PathtoPublish: '$(Build.ArtifactStagingDirectory)'
     ArtifactName: 'NETApp'
     publishLocation: 'Container'
+
