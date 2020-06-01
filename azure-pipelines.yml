@@ -36,23 +36,7 @@ steps:
       !**\*TestAdapter.dll
       !**\obj\**
     searchFolder: '$(System.DefaultWorkingDirectory)'
-    testFiltercriteria: '/Tests: Test_BattleSim_Player_Attacks,
-                          Test_BattleSim_Enemy_Defends,
-                          Test_BattleSim_Enemy_Heals, 
-                          Test_BattleSim_Player_Defends,
-                          Test_BattleSim_Player_Heals,
-                          TestValidNameInputs,
-                          TestInvalidNameInputs,
-                          TestHealthBoundariesAndCharacters,
-                          TestDamageBoundariesAndCharacters,
-                          TestInputFieldCombinations,
-                          TestMoveUp,
-                          TestMoveDown,
-                          TestMoveLeft,
-                          TestMoveRight,
-                          TestRandomEncounter,
-                          TestInvalidCharacterCreate
-                          '
+    testFiltercriteria: '/Tests: TestMethod'
 
 - task: PublishBuildArtifacts@1
   inputs:
