@@ -82,6 +82,7 @@ namespace SoftwareTest_Tests
         #region Player defends
 
         //Testing player defend, enemy attack
+        [Priority(3)]
         [TestMethod]
         [DataRow(2, "Elf", 500, 15, 1, "Rat", 50, 10, DisplayName = "Player Defends")]
         [DataRow(2, "Elf", 1000, 15, 1, "Rat", 50, 10, DisplayName = "Player Defends maxHp")]
@@ -105,6 +106,7 @@ namespace SoftwareTest_Tests
         #region Player heals
 
         //Testing player heal, enemy attack
+        [Priority(3)]
         [TestMethod]
         [DataRow(3, "Elf", 500, 15, 1, "Rat", 50, 10, DisplayName = "Player Heals")]
         [DataRow(3, "Elf", 1000, 15, 1, "Rat", 50, 10, DisplayName = "Player Heals maxHp")]
