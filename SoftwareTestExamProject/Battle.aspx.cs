@@ -27,7 +27,6 @@ namespace SoftwareTestExamProject
             enemy = (Enemy)Session["enemy"];
 
             LabelSetup();
-
         }
 
 
