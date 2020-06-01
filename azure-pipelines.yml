@@ -36,7 +36,6 @@ steps:
       !**\*TestAdapter.dll
       !**\obj\**
     searchFolder: '$(System.DefaultWorkingDirectory)'
-    testFiltercriteria: '/Tests: TestMethod'
 
 - task: PublishBuildArtifacts@1
   inputs:
